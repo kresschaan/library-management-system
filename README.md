@@ -12,4 +12,3 @@ I would like to credit and attribute the following third party resources:
 - [Image by Laura Kapfer from Unsplash](https://unsplash.com/photos/books-on-ground-hmCMUZKLxa4)
 - [Image by Florencia Viadana from Unsplash](https://unsplash.com/photos/assorted-title-book-lot-beside-window-1J8k0qqUfYY)
 - [Image by Henry Be from Unsplash](https://unsplash.com/photos/library-shelf-near-black-wooden-ladder-lc7xcWebECc)
--
