@@ -1,0 +1,31 @@
+{
+    "name": "library-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "server": "json-server -p 3001 --watch db.json --host 127.0.0.1"
+    },
+    "dependencies": {
+        "autoprefixer": "10.4.16",
+        "axios": "^1.6.2",
+        "dotenv": "^16.3.1",
+        "eslint": "8.55.0",
+        "eslint-config-next": "14.0.3",
+        "json-server": "^0.17.4",
+        "next": "14.0.3",
+        "postcss": "8.4.32",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-hook-form": "^7.48.2",
+        "react-icons": "^4.12.0",
+        "tailwindcss": "3.3.6"
+    },
+    "devDependencies": {
+        "prettier": "^3.1.1",
+        "prettier-plugin-tailwindcss": "^0.5.9"
+    }
+}

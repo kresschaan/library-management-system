@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary-3: 243 238 234;
+        --primary-4: 235 227 213;
+        --primary-5: 176 166 149;
+        --background-1: 243 245 247;
+        --secondary-1: 119 107 93;
+    }
+
+    input {
+        @apply focus:outline-none;
+    }
+}
+
+.login-section {
+    @apply flex h-screen flex-col md:flex-row;
+}
+
+.login-form {
+    @apply absolute flex h-screen w-full flex-1 flex-col items-center justify-center lg:relative;
+}
+
+.login-title {
+    @apply z-10 mb-16 text-xl font-bold tracking-wide md:text-black lg:text-3xl xl:text-4xl;
+}
+
+.login-button {
+    @apply mb-14 h-12 rounded-[8px] bg-secondary-1 text-white lg:border-2;
+}
+
+.forgot-password {
+    @apply flex flex-row justify-center text-center font-bold md:font-normal md:text-black;
+}
+
+.form-login-label {
+    @apply mb-2 font-serif text-base group-focus-within:text-black;
+}
+
+.form-login-input {
+    @apply border-black bg-inherit p-4 group-focus-within:border-black;
+}
+
+.form-login-input.valid {
+    @apply border-b;
+}
+
+.form-login-input.error {
+    @apply border-b border-red-400;
+}
+
+.nav-bar-container {
+    @apply hidden flex-row justify-between bg-secondary-1 px-10 py-6 text-xl text-white md:flex w-full;
+}
+
+.nav-bar-item {
+    @apply hover:cursor-pointer hover:text-primary-3;
+}
+
+.mobile-nav-bar {
+    @apply flex flex-row items-center justify-between bg-primary-5 px-10 py-6 text-xl text-white md:hidden lg:bg-inherit;
+}
+
+.mobile-nav-bar-item {
+    @apply hover:cursor-pointer hover:text-primary-5;
+}
+
+.item-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-container > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.item-container {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+    .item-container {
+        flex-direction: row;
+    }
+
+    .item-container > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0px * var(--tw-space-y-reverse));
+        --tw-space-x-reverse: 0;
+        margin-right: calc(2rem * var(--tw-space-x-reverse));
+        margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+h5 {
+    position: absolute;
+    bottom: 1rem;
+    width: 13rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition-duration: 200ms;
+}
+
+.item-gradient {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+    --tw-gradient-from: transparent;
+    --tw-gradient-stops: var(--tw-gradient-from),
+        var(--tw-gradient-to, rgb(0 0 0 / 0));
+    --tw-gradient-to: #111827;
+}
+
+.group:hover .item-gradient {
+    --tw-gradient-from: #f9fafb;
+    --tw-gradient-stops: var(--tw-gradient-from),
+        var(--tw-gradient-to, rgb(249 250 251 / 0));
+    --tw-gradient-to: #fff;
+    opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+    .item {
+        width: 25%;
+    }
+}
